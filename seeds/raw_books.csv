@@ -1,0 +1,501 @@
+book_id,title,author,genre,price,published_year
+1,The Burning Harbor,Agatha Christie,Mystery,8.77,1965
+2,The Final Compass,Zadie Smith,Science Fiction ,30.77,2005
+3,The Whispered Island,Octavia Butler,Science Fiction,33.53,1991
+4,The Shattered Season,Gabriel Garcia Marquez,Mystery,38.73,2007
+5,The Lost Mountain,Gabriel Garcia Marquez,Fantasy,29.55,2020
+6,The Burning Sky,Neil Gaiman,Romance,37.24,1972
+7,The Shattered Keeper,Michelle Obama,Biography,25.4,2003
+8,The Dancing Crown,Gabriel Garcia Marquez,Fantasy,18.33,1957
+9,The Burning Mirror,Isabel Allende,Romance,7.17,1976
+10,The Dancing River,Stephen King,Non-Fiction,28.64,1978
+11,The Dancing Season,Toni Morrison,Romance,6.64,2003
+12,The Secret Keeper,George Orwell,Romance,35.41,2006
+13,The Broken Door,Zadie Smith,Thriller,30.37,2007
+14,The Quiet Shadow,Isabel Allende,Fantasy,6.42,1983
+15,The Lost Promise,Zadie Smith,Fiction,29.84,1969
+16,The Secret Wanderer,George Orwell,Thriller,15.54,2020
+17,The Distant Shadow,Michelle Obama,Science Fiction,10.58,2001
+18,The Hidden Door,Toni Morrison,Biography,15.28,2017
+19,The Wandering Keeper,J.K. Rowling,Biography,36.66,1981
+20,The Golden Thread,Agatha Christie,Non-Fiction,23.91,2016
+21,The Distant Horizon,Octavia Butler,Fiction,27.8,1960
+22,The Crimson Promise,Ursula K. Le Guin,Non-Fiction,27.03,2004
+23,The Crimson Sky,Ursula K. Le Guin,History,37.89,1969
+24,The Silent Compass,Michelle Obama,Non-Fiction,32.8,2023
+25,The Broken Mirror,Gabriel Garcia Marquez,History,5.59,2018
+26,The Silent Wanderer,Jane Austen,Thriller,34.69,2014
+27,The Crimson Crown,Yuval Noah Harari,Romance,20.32,1953
+28,The Wandering Promise,Ursula K. Le Guin,History,34.73,1968
+29,The Rising Door,J.K. Rowling,Fantasy,6.46,2000
+30,The Dancing Keeper,Jane Austen,Biography,36.7,1968
+31,The Quiet Promise,Toni Morrison,Romance,11.35,1956
+32,The Dancing Compass,Ursula K. Le Guin,Non-Fiction,11.91,1992
+33,The Distant Mountain,Toni Morrison,Thriller,11.77,1992
+34,The Fading Crown,Zadie Smith,Thriller,16.07,1950
+35,The Secret Letter,Toni Morrison,History,17.58,1992
+36,The Wandering Compass,Elena Ferrante,Romance,8.81,1960
+37,The Last Mountain,Ursula K. Le Guin,Non-Fiction,36.22,1953
+38,The Whispered Painter,Agatha Christie,Mystery,24.31,2019
+39,The Wandering Mountain,Stephen King,Thriller,15.18,2015
+40,The Hidden Season,Stephen King,Mystery,33.23,1971
+41,The Shattered Mountain,Elena Ferrante,Thriller,28.08,2011
+42,The Distant River,Toni Morrison,Mystery,17.93,1976
+43,The Shattered Door,Agatha Christie,Children,6.4,1963
+44,The Shattered Mirror,Margaret Atwood,Thriller,27.88,1959
+45,The Shattered Mirror,Agatha Christie,Mystery,17.35,2012
+46,The Wandering Wanderer,J.K. Rowling,Science Fiction,23.01,1969
+47,The Quiet Promise,Stephen King,Non-Fiction,19.51,1964
+48,The Wandering Island,Khaled Hosseini,Science Fiction,13.53,1970
+49,The Lost Horizon,George Orwell,Sci-Fi,11.3,2022
+50,The Silent Crown,Jane Austen,Thriller,35.36,2002
+51,The Fading Mountain,Zadie Smith,Science Fiction,10.87,2008
+52,The Fading Painter,Jane Austen,History,5.58,2014
+53,The Forgotten Mountain,Kazuo Ishiguro,Children,25.99,2018
+54,The Shattered Harbor,Jane Austen,Science Fiction,5.04,2005
+55,The Shattered Child,Stephen King,Fantasy,37.84,1998
+56,The Distant Painter,Zadie Smith,Sci-Fi,36.85,2019
+57,The Forgotten Mirror,Neil Gaiman,Fiction,-9.12,1976
+58,The Secret Child,Stephen King,History,13.88,2004
+59,The Whispered Door,Kazuo Ishiguro,History,19.46,2011
+60,The Quiet Door,Ursula K. Le Guin,Romance,25.22,2000
+61,The Lost Harbor,Toni Morrison,Sci-Fi,32.51,1956
+62,The Quiet Season,J.K. Rowling,Science Fiction,8.08,1997
+63,The Hidden Wanderer,George Orwell,History,23.24,1957
+64,The Quiet Island,Elena Ferrante,Fantasy,6.18,2016
+65,The Broken Wanderer,Isabel Allende,Biography,5.01,1985
+66,The Eternal Door,Agatha Christie,Mystery,30.79,1961
+67,The Dancing Crown,Ursula K. Le Guin,Biography,33.54,1974
+68,The Final Season,Zadie Smith,Science Fiction,7.53,1964
+69,The Shattered Mirror,Ursula K. Le Guin,Thriller,20.5,2011
+70,The Broken Thread,Elena Ferrante,Thriller,21.87,1998
+71,The Broken Letter,Michelle Obama,Biography,5.34,1981
+72,The Rising Shadow,Agatha Christie,Biography,37.6,1995
+73,The Burning Painter,Margaret Atwood,Mystery,11.99,1983
+74,The Burning Letter,Neil Gaiman,Thriller,32.26,1960
+75,The Wandering Wanderer,J.K. Rowling,Fantasy,34.68,1990
+76,The Wandering Painter,Margaret Atwood,Fantasy,12.77,1956
+77,The Shattered Child,Khaled Hosseini,Fiction,18.78,1972
+78,The Final Harbor,Octavia Butler,Fiction ,12.38,1991
+79,The Distant Wanderer,Margaret Atwood,Romance,21.5,1996
+80,The Quiet Island,Gabriel Garcia Marquez,Biography,19.02,2023
+81,The Lost Painter,Toni Morrison,Romance,24.44,1975
+82,The Lost Mountain,Khaled Hosseini,Science Fiction,36.26,2018
+83,The Secret Island,Yuval Noah Harari,Thriller,8.46,1977
+84,The Last Island,Haruki Murakami,Biography,17.61,1982
+85,The Distant Garden,Gabriel Garcia Marquez,Thriller,25.16,1972
+86,The Rising Door,Michelle Obama,Children,20.64,1986
+87,The Final Mountain,Isabel Allende,Biography,26.43,1959
+88,The Hidden Promise,Michelle Obama,Biography,29.87,2000
+89,The Last Compass,Stephen King,Fantasy,19.49,1952
+90,The Lost Letter,Margaret Atwood,Non-Fiction,18.9,2010
+91,The Dancing River,J.K. Rowling,Fantasy,7.91,1969
+92,The Hidden Season,Yuval Noah Harari,Romance,9.42,1971
+93,The Silent River,Stephen King,Biography,21.35,1984
+94,The Dancing Compass,Chimamanda Ngozi Adichie,Fantasy,25.92,2022
+95,The Forgotten Horizon,Ursula K. Le Guin,Biography,12.95,1989
+96,The Distant Child,Margaret Atwood,Fiction ,33.54,1994
+97,The Rising Island,Ursula K Le Guin,Children,-21.7,2005
+98,The Rising Wanderer,Toni Morrison,Fantasy,19.41,2000
+99,The Broken Promise,Agatha Christie,Mystery,19.78,1984
+100,The Rising Keeper,Margaret Atwood,Non-Fiction,15.14,2007
+101,The Last Wanderer,Khaled Hosseini,Fiction,38.94,1963
+102,The Rising Mirror,Chimamanda Ngozi Adichie,Fiction,10.27,1993
+103,The Forgotten Crown,Khaled Hosseini,Children,6.11,1968
+104,The Golden Mirror,Agatha Christie,Children,36.35,1998
+105,The Silent Harbor,Toni Morrison,Children,39.81,1962
+106,The Shattered Sky,Khaled Hosseini,Romance,10.55,2020
+107,The Shattered Harbor,Margaret Atwood,Romance,36.06,1977
+108,The Crimson Letter,Gabriel Garcia Marquez,Science Fiction,18.85,1955
+109,The Whispered Island,Kazuo Ishiguro,Non-Fiction,22.5,1993
+110,The Golden River,Stephen King,Fantasy,9.4,2021
+111,The Distant Compass,Neil Gaiman,History,9.72,2012
+112,The Final Keeper,Yuval Noah Harari,Children,11.53,2009
+113,The Last Wanderer,Ursula K. Le Guin,Fantasy,15.35,1996
+114,The Final Garden,Octavia Butler,Science Fiction,17.74,1991
+115,The Hidden Keeper,Agatha Christie,Children,10.39,2002
+116,The Secret Harbor,Haruki Murakami,Non-Fiction,37.82,1954
+117,The Burning Harbor,Khaled Hosseini,Fiction,34.27,2017
+118,The Fading Painter,Margaret Atwood,Mystery,7.48,1976
+119,The Wandering Shadow,Elena Ferrante,Fiction,31.02,1997
+120,The Golden Wanderer,Margaret Atwood,Non-Fiction,7.73,2016
+121,The Crimson Harbor,Toni Morrison,Mystery,27.99,1972
+122,The Dancing Keeper,Gabriel Garcia Marquez,Thriller,21.06,1963
+123,The Quiet Promise,Ursula K. Le Guin,Biography,23.69,1995
+124,The Secret Keeper,Michelle Obama,History,20.07,1980
+125,The Whispered Keeper,Neil Gaiman,Fantasy,13.89,2007
+126,The Eternal Garden,George Orwell,Thriller ,9.73,1950
+127,The Rising Letter,Neil Gaiman,Fiction,38.02,2020
+128,The Shattered Keeper,Zadie Smith,Sci-Fi,10.46,2024
+129,The Broken Letter,Margaret Atwood,Non-Fiction,24.92,1959
+130,The Secret Island,Isabel Allende,Thriller,8.34,1954
+131,The Whispered Season,Jane Austen,Biography,33.6,1965
+132,The Broken Wanderer,J.K. Rowling,History,23.35,2022
+133,The Lost Thread,Octavia Butler,Sci-Fi,18.75,2023
+134,The Shattered Shadow,Toni Morrison,History,16.77,1956
+135,The Dancing Season,Margaret Atwood,Fantasy,29.43,2011
+136,The Dancing Sky,Khaled Hosseini,Thriller,26.56,1981
+137,The Broken Shadow,Margaret Atwood,Biography,25.16,2002
+138,The Forgotten Door,Stephen King,Biography,5.85,1994
+139,The Fading Compass,Kazuo Ishiguro,Fiction,13.17,1969
+140,The Hidden Harbor,George Orwell,Thriller,35.41,1951
+141,The Secret Harbor,Yuval Noah Harari,Fiction,30.9,2019
+142,The Shattered Mirror,Ursula K. Le Guin,Science Fiction,18.18,2017
+143,The Golden Mirror,Isabel Allende,Mystery,26.63,1951
+144,The Hidden Season,Margaret Atwood,Biography,5.67,1999
+145,The Broken Season,Octavia Butler,Non-Fiction,21.96,1961
+146,The Quiet Sky,Octavia Butler,Fantasy,5.75,2017
+147,The Rising Thread,Khaled Hosseini,Sci-Fi,17.44,2014
+148,The Last River,Margaret Atwood,Fiction,38.22,1993
+149,The Eternal Mountain,Jane Austen,Fantasy,26.44,1979
+150,The Forgotten Letter,Zadie Smith,Romance,16.52,1976
+151,The Lost Painter,Ursula K. Le Guin,Mystery,15.81,2017
+152,The Lost Child,Chimamanda Ngozi Adichie,Thriller,16.11,1965
+153,The Quiet Thread,Chimamanda Ngozi Adichie,Biography,19.49,2006
+154,The Last Mountain,Neil Gaiman,Sci-Fi,26.59,1979
+155,The Fading Letter,Toni Morrison,Biography,32.29,2010
+156,The Distant Promise,Agatha Christie,Sci-Fi,19.3,1984
+157,The Forgotten Letter,Neil Gaiman,Non-Fiction,38.41,2012
+158,The Secret Compass,Toni Morrison,Fiction,33.85,2000
+159,The Fading Painter,Kazuo Ishiguro,Fiction,20.81,1955
+160,The Broken Horizon,Ursula K. Le Guin,Fiction,23.06,1956
+161,The Burning Crown,Elena Ferrante,Romance,15.01,1987
+162,The Fading River,Octavia Butler,Children,20.81,1964
+163,The Quiet Painter,Ursula K. Le Guin,History,5.87,1975
+164,The Final Shadow,Margaret Atwood,Science Fiction,9.0,1996
+165,The Hidden Horizon,Agatha Christie,Fantasy,10.6,1955
+166,The Quiet Thread,Zadie Smith,Sci-Fi,31.92,1989
+167,The Rising Compass,Yuval Noah Harari,Non-Fiction,-38.62,1982
+168,The Silent Compass,Khaled Hosseini,Fantasy,26.28,1977
+169,The Whispered Island,Elena Ferrante,Non-Fiction,5.23,1985
+170,The Fading Keeper,Neil Gaiman,Sci-Fi,10.09,2023
+171,The Fading Crown,Michelle Obama,Fiction,39.78,1986
+172,The Fading Wanderer,Zadie Smith,Science Fiction,17.61,1988
+173,The Secret Door,Agatha Christie,History,7.27,1965
+174,The Last Thread,Octavia Butler,Mystery,26.42,2017
+175,The Hidden Island,Kazuo Ishiguro,Romance,34.67,2023
+176,The Fading Door,Chimamanda Ngozi Adichie,Children,27.12,1973
+177,The Fading Letter,Yuval Noah Harari,Fiction,21.27,1976
+178,The Fading Child,Gabriel Garcia Marquez,Biography,27.31,1975
+179,The Rising Mirror,Jane Austen,Fantasy,31.85,1992
+180,The Secret Season,Zadie Smith,Fiction,11.79,2011
+181,The Wandering River,Chimamanda Ngozi Adichie,Children,23.79,2002
+182,The Golden Horizon,Yuval Noah Harari,Biography,5.66,1992
+183,The Distant Shadow,Chimamanda Ngozi Adichie,Fiction,18.13,1971
+184,The Whispered Wanderer,Agatha Christie,Non-Fiction,31.3,1990
+185,The Golden Mirror,Gabriel Garcia Marquez,Mystery,34.03,2017
+186,The Rising Promise,Haruki Murakami,Fiction,36.97,1953
+187,The Wandering Horizon,Chimamanda Ngozi Adichie,Children,23.33,1968
+188,The Crimson Horizon,Chimamanda Ngozi Adichie,Fiction,29.98,1950
+189,The Rising River,Kazuo Ishiguro,Biography,6.61,1989
+190,The Silent Painter,Yuval Noah Harari,Mystery,11.74,1990
+191,The Final Harbor,Margaret Atwood,Romance,38.54,1963
+192,The Burning Keeper,Stephen King,Romance,29.65,1981
+193,The Quiet Shadow,Yuval Noah Harari,Biography,6.78,1956
+194,The Crimson Season,George Orwell,History,25.86,2007
+195,The Fading Door,Yuval Noah Harari,Mystery,28.48,2009
+196,The Whispered Mountain,Jane Austen,Children,15.86,2009
+197,The Wandering Letter,Toni Morrison,Thriller,17.72,1992
+198,The Secret Compass,Khaled Hosseini,Children,21.75,1986
+199,The Distant Wanderer,Zadie Smith,Non-Fiction,30.0,2021
+200,The Hidden Crown,Ursula K. Le Guin,Thriller,26.73,2011
+201,The Eternal Shadow,Michelle Obama,Thriller,39.31,1993
+202,The Dancing Letter,Isabel Allende,Non-Fiction,29.92,1964
+203,The Whispered Wanderer,Elena Ferrante,Non-Fiction,11.17,1958
+204,The Fading Harbor,Kazuo Ishiguro,History,27.57,1977
+205,The Lost Painter,J.K. Rowling,Science Fiction,26.55,1976
+206,The Secret Crown,Zadie Smith,Romance,37.78,1994
+207,The Hidden Painter,J.K. Rowling,Fantasy,9.46,1997
+208,The Dancing River,J.K. Rowling,Biography,14.88,2005
+209,The Whispered Season,Michelle Obama,History,24.08,2010
+210,The Lost Sky,Ursula K. Le Guin,Biography,10.4,1966
+211,The Lost Garden,Jane Austen,Science Fiction,20.29,1960
+212,The Lost Child,Elena Ferrante,Thriller,26.81,2004
+213,The Dancing Compass,Agatha Christie,Science Fiction ,22.44,2014
+214,The Last Child,Ursula K. Le Guin,Fiction,24.89,1964
+215,The Whispered Island,Jane Austen,Fantasy,39.43,2009
+216,The Shattered Shadow,Octavia Butler,Non-Fiction,27.07,1959
+217,The Dancing Painter,Yuval Noah Harari,Biography,5.38,2010
+218,The Whispered Thread,Gabriel Garcia Marquez,Romance,6.24,1988
+219,The Whispered Mirror,George Orwell,Thriller,6.81,1953
+220,The Rising Island,Jane Austen,Non-Fiction,14.72,1985
+221,The Last Mirror,J.K. Rowling,Thriller,25.71,2007
+222,The Distant Promise,Margaret Atwood,Mystery,32.98,1993
+223,The Hidden Mountain,Kazuo Ishiguro,Science Fiction,19.45,2006
+224,The Quiet Sky,Zadie Smith,Biography,14.25,1956
+225,The Quiet Compass,Agatha Christie,Children,31.33,1998
+226,The Eternal Island,Margaret Atwood,History ,37.45,1990
+227,The Shattered River,Haruki Murakami,Biography,20.11,1984
+228,The Secret Mirror,Margaret Atwood,Romance,18.69,1980
+229,The Whispered Sky,Octavia Butler,Science Fiction ,5.3,2002
+230,The Crimson Horizon,Haruki Murakami,Biography,14.92,1953
+231,The Fading Shadow,George Orwell,Mystery,27.33,1965
+232,The Hidden Wanderer,Chimamanda Ngozi Adichie,Thriller,11.47,1973
+233,The Last Crown,Elena Ferrante,Non-Fiction,37.29,2004
+234,The Secret Mirror,Isabel Allende,Romance,18.4,1957
+235,The Last Mirror,Isabel Allende,Children,12.02,2012
+236,The Crimson Mountain,Ursula K. Le Guin,Mystery,8.72,1983
+237,The Crimson River,Jane Austen,Romance,5.66,1950
+238,The Golden Season,Margaret Atwood,Biography,25.11,2012
+239,The Wandering Child,Agatha Christie,Non-Fiction,5.12,2011
+240,The Crimson Painter,Ursula K. Le Guin,Biography,15.6,1961
+241,The Distant Keeper,Michelle Obama,Children,15.15,2020
+242,The Golden Season,Neil Gaiman,History,27.07,1960
+243,The Final Sky,Chimamanda Ngozi Adichie,Fiction,25.75,1958
+244,The Dancing Crown,Khaled Hosseini,Children,5.57,1993
+245,The Golden Season,Haruki Murakami,Fantasy,28.73,1969
+246,The Whispered Letter,Jane Austen,Science Fiction ,36.75,1981
+247,The Lost Garden,Isabel Allende,Romance,8.41,1958
+248,The Crimson Harbor,Khaled Hosseini,Thriller,33.16,2001
+249,The Secret Harbor,Zadie Smith,Biography,32.76,1972
+250,The Secret Shadow,Haruki Murakami,History,17.95,1981
+251,The Whispered River,Chimamanda Ngozi Adichie,Thriller,10.52,1960
+252,The Silent Garden,Isabel Allende,Thriller,19.57,2010
+253,The Lost Sky,Chimamanda Ngozi Adichie,Fantasy,13.37,1954
+254,The Fading Promise,Khaled Hosseini,Non-Fiction,32.39,1950
+255,The Dancing Letter,Neil Gaiman,Fantasy,26.66,2019
+256,The Shattered Letter,Elena Ferrante,Mystery,11.78,2010
+257,The Wandering Promise,Isabel Allende,Fiction,17.75,1982
+258,The Secret Wanderer,Elena Ferrante,Fiction,11.16,2012
+259,The Shattered Harbor,Jane Austen,Children,16.41,1991
+260,The Broken Harbor,Michelle Obama,Mystery,35.45,1978
+261,The Hidden Island,Zadie Smith,History,37.48,1999
+262,The Distant Mountain,Elena Ferrante,Biography,12.08,2022
+263,The Golden Mirror,Chimamanda Ngozi Adichie,Children,10.99,1987
+264,The Fading Promise,Kazuo Ishiguro,Thriller,34.93,2016
+265,The Wandering Sky,Zadie Smith,Children,30.55,1981
+266,The Broken Thread,Gabriel Garcia Marquez,Thriller,36.98,2003
+267,The Golden River,Khaled Hosseini,Fantasy,23.59,1962
+268,The Final Island,Toni Morrison,Fiction,19.23,1995
+269,The Rising Letter,Jane Austen,Romance,21.07,2024
+270,The Silent Compass,Elena Ferrante,History,35.5,1950
+271,The Hidden Season,Michelle Obama,Romance,14.44,2019
+272,The Whispered Sky,Jane Austen,Biography,6.92,1996
+273,The Golden Harbor,Agatha Christie,Thriller,17.83,1958
+274,The Dancing Sky,Chimamanda Ngozi Adichie,Mystery,27.72,2024
+275,The Burning Letter,Michelle Obama,Romance,19.8,1997
+276,The Distant Compass,Khaled Hosseini,Non-Fiction,23.62,1987
+277,The Final Wanderer,Stephen King,Non-Fiction,35.94,2000
+278,The Quiet Crown,Jane Austen,Romance,10.18,1976
+279,The Shattered Garden,Yuval Noah Harari,Fantasy,21.59,1952
+280,The Rising Sky,Jane Austen,Mystery,23.19,2024
+281,The Secret Thread,Khaled Hosseini,Fantasy,20.58,1966
+282,The Rising Promise,Margaret Atwood,Biography,31.94,1995
+283,The Rising Compass,Isabel Allende,Science Fiction,39.06,1969
+284,The Quiet Letter,Haruki Murakami,Biography,20.43,1976
+285,The Dancing River,Michelle Obama,Science Fiction,10.69,1953
+286,The Eternal Island,Chimamanda Ngozi Adichie,Biography,38.96,2014
+287,The Secret Crown,Khaled Hosseini,Thriller,32.99,2006
+288,The Secret Harbor,Khaled Hosseini,Science Fiction,5.87,1978
+289,The Final Door,Jane Austen,Thriller,25.42,1985
+290,The Burning Garden,Jane Austen,Children,38.52,2000
+291,The Burning Island,Michelle Obama,Fantasy,36.8,1968
+292,The Forgotten Door,Agatha Christie,Romance,15.78,2021
+293,The Hidden Sky,Elena Ferrante,History,15.1,2004
+294,The Forgotten Mountain,Zadie Smith,Sci-Fi,35.36,1958
+295,The Whispered Season,Jane Austen,Romance,24.45,1967
+296,The Burning Promise,Agatha Christie,Children,33.92,1988
+297,The Wandering Keeper,Elena Ferrante,Fiction,15.51,2010
+298,The Crimson Crown,Gabriel Garcia Marquez,Mystery,31.77,1958
+299,The Fading Door,Zadie Smith,History,26.98,1965
+300,The Distant Horizon,Zadie Smith,Romance,7.05,1967
+301,The Distant Promise,George Orwell,History,38.43,1987
+302,The Shattered Shadow,Octavia Butler,Science Fiction,10.85,1990
+303,The Rising Mirror,Stephen King,Thriller,10.03,1986
+304,The Distant Island,Gabriel Garcia Marquez,Sci-Fi,12.74,2021
+305,The Fading Horizon,Ursula K. Le Guin,Non-Fiction,37.06,1966
+306,The Silent Island,Stephen King,Biography,20.47,2016
+307,The Secret Promise,Yuval Noah Harari,Non-Fiction,34.99,1979
+308,The Rising Mountain,Neil Gaiman,Non-Fiction,31.71,1952
+309,The Wandering Child,George Orwell,Fiction,22.97,1965
+310,The Last River,Jane Austen,Fiction,32.38,1976
+311,The Whispered Sky,Isabel Allende,Fiction,34.61,2024
+312,The Distant Door,Isabel Allende,Thriller,24.96,2024
+313,The Silent Horizon,Neil Gaiman,Romance,-31.39,1962
+314,The Burning Horizon,Khaled Hosseini,Thriller,28.57,1995
+315,The Eternal Child,Neil Gaiman,History,39.46,1964
+316,The Shattered Mountain,Khaled Hosseini,Romance,6.42,1964
+317,The Eternal Crown,Elena Ferrante,Romance,34.44,2002
+318,The Rising Child,Neil Gaiman,Children,17.86,2012
+319,The Crimson Season,Elena Ferrante,Non-Fiction,18.82,1963
+320,The Quiet Shadow,Stephen King,Biography,34.54,1979
+321,The Forgotten Island,Margaret Atwood,Thriller,31.47,2001
+322,The Distant Island,Kazuo Ishiguro,Children,10.16,1965
+323,The Last Island,Khaled Hosseini,Sci-Fi,34.06,1953
+324,The Quiet Season,Kazuo Ishiguro,Science Fiction,31.61,2016
+325,The Wandering Compass,Neil Gaiman,Children,14.16,2019
+326,The Dancing Garden,George Orwell,Non-Fiction,16.01,2008
+327,The Golden River,Isabel Allende,Romance,10.75,1989
+328,The Eternal Island,Haruki Murakami,Children,28.99,2010
+329,The Dancing Promise,Octavia Butler,Romance,38.98,1995
+330,The Rising Thread,George Orwell,Fiction,17.82,2024
+331,The Silent Thread,Agatha Christie,Biography,19.42,1981
+332,The Broken Letter,Yuval Noah Harari,Non-Fiction,9.01,2018
+333,The Secret River,Elena Ferrante,History,36.55,2010
+334,The Whispered Garden,Michelle Obama,History,8.42,1976
+335,The Secret Island,Octavia Butler,Biography,15.48,1975
+336,The Wandering Shadow,Ursula K. Le Guin,Romance,39.87,1978
+337,The Fading Shadow,Zadie Smith,Biography,24.82,2004
+338,The Burning Door,Jane Austen,Romance,15.5,1990
+339,The Burning Child,Agatha Christie,Fantasy,31.72,1952
+340,The Shattered Promise,Zadie Smith,Children,27.33,2005
+341,The Whispered River,Octavia Butler,Children,10.27,1988
+342,The Forgotten Child,Michelle Obama,Non-Fiction,34.61,1986
+343,The Quiet Mirror,Kazuo Ishiguro,Mystery,11.72,1989
+344,The Final Island,Ursula K. Le Guin,History,6.3,1967
+345,The Silent Mirror,Margaret Atwood,Science Fiction,30.29,1957
+346,The Hidden Thread,Kazuo Ishiguro,Non-Fiction,19.25,1961
+347,The Eternal Mountain,Toni Morrison,Fantasy,23.27,2017
+348,The Last Island,Jane Austen,Non-Fiction,15.97,1999
+349,The Broken Child,Neil Gaiman,Sci-Fi,19.29,1957
+350,The Wandering Keeper,Stephen King,Non-Fiction,19.83,1985
+351,The Lost Door,Khaled Hosseini,Romance,38.84,1956
+352,The Broken Mirror,Ursula K. Le Guin,Biography,28.98,1980
+353,The Final Season,J.K. Rowling,History,37.13,1980
+354,The Rising Sky,Isabel Allende,Biography,31.84,1954
+355,The Last Shadow,Khaled Hosseini,History,16.65,1962
+356,The Quiet Mirror,Octavia Butler,History,33.47,2008
+357,The Silent River,Isabel Allende,Sci-Fi,15.69,1964
+358,The Quiet Letter,Octavia Butler,Science Fiction,32.74,2011
+359,The Lost Mirror,Isabel Allende,Biography,11.95,1973
+360,The Eternal Season,Zadie Smith,Fiction,27.65,1961
+361,The Final Sky,Margaret Atwood,Sci-Fi,26.01,1997
+362,The Quiet Painter,Haruki Murakami,Fantasy,37.2,2013
+363,The Crimson Letter,Neil Gaiman,Romance,22.3,1976
+364,The Fading Sky,Yuval Noah Harari,Mystery,19.3,1987
+365,The Last Letter,Kazuo Ishiguro,Mystery,28.95,1951
+366,The Wandering Mountain,Michelle Obama,History,29.97,1982
+367,The Hidden Harbor,Ursula K. Le Guin,Biography,21.48,1955
+368,The Silent Mirror,Octavia Butler,Romance,28.49,2021
+369,The Golden Painter,Isabel Allende,Fantasy,16.87,1961
+370,The Secret Horizon,Gabriel Garcia Marquez,Non-Fiction,39.25,1985
+371,The Distant Child,Yuval Noah Harari,Romance,31.65,1990
+372,The Forgotten Promise,Michelle Obama,Children,10.29,2006
+373,The Golden Sky,Chimamanda Ngozi Adichie,Sci-Fi,29.71,2013
+374,The Golden Compass,Stephen King,Fantasy,22.25,1968
+375,The Crimson Door,Jane Austen,Romance,10.89,1984
+376,The Whispered Painter,Neil Gaiman,Fiction,24.98,1959
+377,The Broken Island,Haruki Murakami,Fiction,39.35,1997
+378,The Whispered Harbor,Michelle Obama,Non-Fiction,29.77,1984
+379,The Fading Garden,Michelle Obama,Thriller,16.37,2022
+380,The Lost Sky,George Orwell,Romance,6.94,1998
+381,The Hidden Season,Margaret Atwood,History,34.83,2001
+382,The Rising Mountain,Haruki Murakami,History,37.26,1966
+383,The Distant Harbor,Stephen King,Children,18.58,2004
+384,The Hidden Child,Stephen King,History,8.25,2009
+385,The Broken Mountain,Khaled Hosseini,Fantasy,21.39,2011
+386,The Rising Mountain,Chimamanda Ngozi Adichie,Romance,23.31,1956
+387,The Dancing Shadow,George Orwell,Fantasy,8.31,2022
+388,The Last Door,Margaret Atwood,Fantasy ,30.92,1973
+389,The Eternal River,Jane Austen,Romance,30.34,2007
+390,The Fading Mirror,Michelle Obama,Sci-Fi,39.38,1963
+391,The Forgotten Keeper,JK Rowling,Non-Fiction ,27.95,2001
+392,The Fading Island,Yuval Noah Harari,Thriller,28.58,2000
+393,The Rising Shadow,Chimamanda Ngozi Adichie,Mystery,5.56,1953
+394,The Burning Island,Chimamanda Ngozi Adichie,History,35.04,1961
+395,The Rising Compass,Chimamanda Ngozi Adichie,Fiction,36.58,2006
+396,The Wandering Island,J.K. Rowling,Thriller,15.32,2000
+397,The Golden Thread,J.K. Rowling,History,34.7,2020
+398,The Rising River,Khaled Hosseini,Fantasy,26.4,2012
+399,The Broken River,Octavia Butler,Thriller,7.22,2003
+400,The Wandering Harbor,Khaled Hosseini,Biography,20.27,1974
+401,The Wandering Door,Elena Ferrante,Mystery,28.97,2009
+402,The Lost Crown,Agatha Christie,Biography,32.99,1976
+403,The Rising Shadow,Khaled Hosseini,Mystery,22.23,2013
+404,The Rising Letter,Neil Gaiman,Fiction,14.13,1972
+405,The Shattered River,Jane Austen,Non-Fiction,9.22,1983
+406,The Secret Door,George Orwell,Fantasy,10.29,2015
+407,The Fading Harbor,George Orwell,Children,38.69,1963
+408,The Fading Wanderer,Haruki Murakami,Fiction,10.85,1976
+409,The Distant Promise,Yuval Noah Harari,Fantasy,35.47,1996
+410,The Secret Mountain,Haruki Murakami,Children,-31.92,2010
+411,The Secret Crown,Octavia Butler,Romance,31.42,1981
+412,The Lost Horizon,Gabriel Garcia Marquez,Science Fiction,19.33,2016
+413,The Distant Garden,Elena Ferrante,Fiction,23.11,1993
+414,The Secret Season,Isabel Allende,History,28.11,2023
+415,The Golden Horizon,Yuval Noah Harari,Fantasy,30.25,1994
+416,The Silent Mirror,Octavia Butler,Science Fiction,12.18,2006
+417,The Distant Season,Neil Gaiman,Non-Fiction,16.71,1966
+418,The Shattered Keeper,Yuval Noah Harari,Fantasy,23.25,1970
+419,The Silent Garden,Ursula K. Le Guin,Mystery,15.64,2014
+420,The Crimson River,Stephen King,Fantasy,6.67,1965
+421,The Final Crown,Zadie Smith,Children,13.26,2024
+422,The Whispered Keeper,Kazuo Ishiguro,Romance,32.47,1967
+423,The Eternal Horizon,Toni Morrison,Fantasy,33.8,1962
+424,The Lost Child,Gabriel Garcia Marquez,Fiction,9.55,1959
+425,The Distant Horizon,Agatha Christie,Fantasy,35.52,2004
+426,The Final Island,Gabriel Garcia Marquez,Science Fiction,21.02,2015
+427,The Shattered Harbor,Neil Gaiman,Fiction,38.04,1965
+428,The Fading Child,Haruki Murakami,Thriller,23.3,1989
+429,The Distant Crown,Yuval Noah Harari,Sci-Fi,6.7,1986
+430,The Burning Promise,Khaled Hosseini,Fantasy,35.46,2023
+431,The Rising Painter,Elena Ferrante,History,30.2,1967
+432,The Shattered Compass,Elena Ferrante,Science Fiction,32.99,2002
+433,The Eternal Letter,Agatha Christie,Fiction,36.15,1961
+434,The Quiet Garden,Zadie Smith,Romance,9.33,1974
+435,The Fading Keeper,Zadie Smith,Thriller,31.27,1952
+436,The Crimson Keeper,Isabel Allende,Romance,13.59,2024
+437,The Final Shadow,Ursula K. Le Guin,History,22.2,1993
+438,The Forgotten Promise,Gabriel Garcia Marquez,Fantasy,14.0,1962
+439,The Dancing Promise,Yuval Noah Harari,Romance,10.4,1971
+440,The Golden Wanderer,Michelle Obama,Fiction,8.46,1991
+441,The Last Season,Haruki Murakami,Mystery,25.51,2014
+442,The Eternal Harbor,Margaret Atwood,Children,7.29,1979
+443,The Silent Mirror,Ursula K. Le Guin,Non-Fiction,24.41,1988
+444,The Whispered Child,Elena Ferrante,Fantasy,38.88,1971
+445,The Broken Keeper,Gabriel Garcia Marquez,Fantasy,5.04,1987
+446,The Quiet Garden,George Orwell,Children,13.78,1994
+447,The Burning Painter,Octavia Butler,Science Fiction,15.52,1965
+448,The Lost Keeper,Margaret Atwood,Mystery,38.51,1993
+449,The Last Compass,Margaret Atwood,Biography,21.09,1952
+450,The Lost Garden,Kazuo Ishiguro,Fiction,19.46,2012
+451,The Eternal Keeper,Jane Austen,Non-Fiction,36.24,2006
+452,The Crimson Door,Agatha Christie,Biography,34.37,1951
+453,The Crimson Compass,Stephen King,Children ,31.01,1995
+454,The Burning Shadow,Kazuo Ishiguro,Mystery,22.28,1985
+455,The Wandering Wanderer,Neil Gaiman,History,14.71,1971
+456,The Dancing Sky,Zadie Smith,Thriller,7.29,1958
+457,The Lost Mirror,Zadie Smith,Fantasy,14.6,1952
+458,The Dancing Wanderer,Margaret Atwood,Children ,19.95,1956
+459,The Secret Child,Gabriel Garcia Marquez,Fantasy,17.65,1978
+460,The Golden Mirror,Gabriel Garcia Marquez,Biography ,11.81,2023
+461,The Silent Letter,Gabriel Garcia Marquez,Mystery,16.52,1962
+462,The Silent Island,Gabriel Garcia Marquez,Thriller,37.73,1981
+463,The Crimson Island,Toni Morrison,Fiction,23.19,1959
+464,The Fading Wanderer,Elena Ferrante,Children,7.99,1954
+465,The Eternal Thread,Jane Austen,Fiction,20.47,2005
+466,The Hidden Harbor,George Orwell,Romance,19.06,2002
+467,The Broken Wanderer,Kazuo Ishiguro,History,19.98,1962
+468,The Secret Garden,Elena Ferrante,Thriller,8.59,1958
+469,The Whispered Sky,Zadie Smith,Fantasy,19.74,2006
+470,The Quiet Letter,Chimamanda Ngozi Adichie,Fiction,25.46,1995
+471,The Rising Painter,Ursula K. Le Guin,Science Fiction,15.19,2016
+472,The Whispered Mountain,George Orwell,Fantasy,19.77,1975
+473,The Burning Shadow,Michelle Obama,Children,39.37,1992
+474,The Whispered Painter,Michelle Obama,History,8.67,1955
+475,The Wandering Letter,J.K. Rowling,Mystery,12.46,1992
+476,The Eternal Sky,Agatha Christie,Fiction,7.58,1964
+477,The Lost Crown,Elena Ferrante,Thriller,17.6,1975
+478,The Burning Crown,Isabel Allende,Romance,16.89,1972
+479,The Burning Garden,Isabel Allende,Non-Fiction,28.71,1964
+480,The Secret Sky,Yuval Noah Harari,Biography,28.13,2005
+481,The Hidden Harbor,Chimamanda Ngozi Adichie,Science Fiction,18.24,2004
+482,The Broken River,Kazuo Ishiguro,Fantasy,10.2,1985
+483,The Lost Horizon,Zadie Smith,Mystery,32.46,1958
+484,The Quiet Horizon,Agatha Christie,Fantasy,23.16,1997
+485,The Shattered Island,Khaled Hosseini,Thriller,37.24,1954
+486,The Burning Letter,Neil Gaiman,Mystery,15.71,2023
+487,The Quiet Door,Margaret Atwood,Science Fiction,23.16,1955
+488,The Final Horizon,Kazuo Ishiguro,Children,19.31,1990
+489,The Last Season,J.K. Rowling,Mystery,7.66,1987
+490,The Shattered Horizon,Ursula K. Le Guin,Romance,8.44,1954
+491,The Dancing Sky,Michelle Obama,Biography,31.08,1985
+492,The Burning Wanderer,Chimamanda Ngozi Adichie,Fantasy,5.3,1994
+493,The Eternal Season,Zadie Smith,Fiction,22.94,1969
+494,The Eternal Letter,Toni Morrison,Mystery,23.05,2009
+495,The Final Thread,Jane Austen,Mystery,37.97,2006
+496,The Final Keeper,J.K. Rowling,Thriller,15.7,2013
+497,The Distant Thread,Toni Morrison,History,29.17,1952
+498,The Whispered River,Chimamanda Ngozi Adichie,Biography,32.97,2023
+499,The Eternal Season,Neil Gaiman,Non-Fiction,11.59,2022
+500,The Final Crown,Jane Austen,Fantasy,33.93,1953
