@@ -1,0 +1,9 @@
+# Copy this to profiles.yml and adjust the path if needed.
+# profiles.yml is gitignored because it can contain local-only paths/credentials.
+booknest:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: ./booknest.duckdb
+      threads: 4

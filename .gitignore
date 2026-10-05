@@ -1,0 +1,26 @@
+# dbt
+target/
+dbt_packages/
+logs/
+.user.yml
+
+# DuckDB (local warehouse file)
+*.duckdb
+*.duckdb.wal
+
+# Local profile (contains machine-specific paths)
+profiles.yml
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# OS
+.DS_Store
+
+# Exported CSVs for ThoughtSpot (keep the folder, ignore contents)
+exports/*
+!exports/.gitkeep
+dbt_internal_packages/
