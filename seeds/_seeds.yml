@@ -1,0 +1,9 @@
+version: 2
+
+seeds:
+  - name: raw_customers
+  - name: raw_books
+  - name: raw_orders
+  - name: raw_order_items
+  - name: raw_inventory
+  - name: raw_payments

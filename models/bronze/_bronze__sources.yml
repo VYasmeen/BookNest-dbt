@@ -1,0 +1,78 @@
+version: 2
+
+sources:
+  - name: booknest_raw
+    description: >
+      Raw data extracted from BookNest's operational systems (CRM, catalog,
+      OLTP, warehouse management, payment gateway) and landed as CSVs.
+      Loaded into DuckDB via `dbt seed`. Treated as the untouched upstream contract.
+    schema: main_raw
+    tables:
+      - name: raw_customers
+        description: Customer records from the CRM. Known DQ issues include duplicate emails with different casing, missing country, and future signup dates.
+        columns:
+          - name: customer_id
+            description: Natural primary key assigned by the CRM.
+          - name: first_name
+          - name: last_name
+          - name: email
+            description: Customer email — not deduplicated in source; casing may vary.
+          - name: signup_date
+            description: Date the customer created the account. May be in the future (source bug).
+          - name: country
+          - name: city
+
+      - name: raw_books
+        description: Book catalog records. Known DQ issues include inconsistent genre spelling ("Sci-Fi" vs "Science Fiction"), negative prices, and author name variants.
+        columns:
+          - name: book_id
+            description: Natural primary key assigned by the catalog system.
+          - name: title
+          - name: author
+          - name: genre
+          - name: price
+          - name: published_year
+
+      - name: raw_orders
+        description: Order header records from the OLTP. One row per order placed. Known DQ issues include mixed-case status, order_total not matching sum of items, and orphan customer_id.
+        columns:
+          - name: order_id
+            description: Natural primary key assigned by the OLTP.
+          - name: customer_id
+            description: Foreign key to customers; may be orphaned.
+          - name: order_date
+          - name: status
+            description: One of placed/shipped/delivered/cancelled/returned, but casing varies in source.
+          - name: order_total
+
+      - name: raw_order_items
+        description: Order line items from the OLTP. One row per book per order. Known DQ issues include negative quantity, zero price, and orphan book_id.
+        columns:
+          - name: order_item_id
+            description: Natural primary key assigned by the OLTP.
+          - name: order_id
+            description: Foreign key to orders.
+          - name: book_id
+            description: Foreign key to books; may be orphaned.
+          - name: quantity
+          - name: unit_price
+
+      - name: raw_inventory
+        description: Current stock snapshot per book from the warehouse management system. Known DQ issues include negative stock and missing restock date.
+        columns:
+          - name: book_id
+            description: Natural primary key — one row per book.
+          - name: stock_quantity
+          - name: last_restocked_at
+
+      - name: raw_payments
+        description: Payment events per order from the payment gateway. Known DQ issues include amount != order_total, duplicate payments, and paid_at before order_date.
+        columns:
+          - name: payment_id
+            description: Natural primary key assigned by the payment gateway.
+          - name: order_id
+            description: Foreign key to orders.
+          - name: payment_method
+          - name: payment_status
+          - name: amount
+          - name: paid_at

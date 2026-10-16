@@ -1,0 +1,188 @@
+version: 2
+
+models:
+  # ---------- Dimensions ----------
+  - name: dim_customers
+    description: >
+      Customer dimension. One row per customer_id with full_name and
+      days_since_signup helpers for downstream marts.
+    columns:
+      - name: customer_id
+        description: Primary key.
+        tests:
+          - not_null
+          - unique
+      - name: email
+        tests:
+          - not_null
+      - name: full_name
+        tests:
+          - not_null
+
+  - name: dim_books
+    description: >
+      Book dimension. One row per book_id with a derived price_band
+      (budget/standard/premium/luxury/unknown).
+    columns:
+      - name: book_id
+        description: Primary key.
+        tests:
+          - not_null
+          - unique
+      - name: title
+        tests:
+          - not_null
+      - name: price_band
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['budget', 'standard', 'premium', 'luxury', 'unknown']
+
+  - name: dim_date
+    description: >
+      Generated calendar spanning 2023-01-01 to 2026-12-31. Not sourced from any
+      system — fabricated so time-based rollups don't depend on fact-side dates.
+    columns:
+      - name: date_day
+        description: Primary key — one row per day.
+        tests:
+          - not_null
+          - unique
+
+  # ---------- Facts ----------
+  - name: fct_order_items
+    description: >
+      Atomic sales fact. Grain: one row per book sold in an order. is_valid_sale
+      filters out orphaned refs, invalid quantity/price, and cancelled/returned orders.
+    columns:
+      - name: order_item_id
+        description: Primary key.
+        tests:
+          - not_null
+          - unique
+      - name: order_id
+        tests:
+          - not_null
+      - name: book_id
+        description: FK to dim_books. Known orphans from the source.
+        tests:
+          - relationships:
+              arguments:
+                to: ref('dim_books')
+                field: book_id
+              config:
+                severity: warn
+      - name: is_valid_sale
+        tests:
+          - not_null
+
+  - name: fct_orders
+    description: >
+      Order-level fact. Grain: one row per order_id. Includes stated vs computed
+      totals so Finance can see mismatches, and a flag for orphan customer_id.
+    columns:
+      - name: order_id
+        description: Primary key.
+        tests:
+          - not_null
+          - unique
+      - name: customer_id
+        description: FK to dim_customers. Known orphans from the source.
+        tests:
+          - relationships:
+              arguments:
+                to: ref('dim_customers')
+                field: customer_id
+              config:
+                severity: warn
+      - name: status
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['placed', 'shipped', 'delivered', 'cancelled', 'returned']
+              config:
+                severity: warn
+
+  - name: fct_inventory_snapshot
+    description: >
+      SCD2 inventory fact built from snap_inventory. Grain: one row per book_id
+      per snapshot period. is_current flags the live row for each book.
+    columns:
+      - name: book_id
+        description: FK to dim_books. Not unique on its own — one row per snapshot period.
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_books')
+                field: book_id
+              config:
+                severity: warn
+      - name: snapshot_date
+        tests:
+          - not_null
+      - name: is_current
+        tests:
+          - not_null
+
+  # ---------- Marts ----------
+  - name: sales_daily
+    description: >
+      Daily revenue, units sold, and distinct orders by genre. Only valid sales
+      are counted. Powers the Sales dashboard's time-series views.
+    columns:
+      - name: sale_date
+        tests:
+          - not_null
+      - name: revenue
+        tests:
+          - not_null
+
+  - name: customer_lifetime
+    description: >
+      One row per customer with lifetime revenue, units, order count, AOV,
+      first/last order dates, and days active. Powers the Customer dashboard.
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+          - unique
+      - name: lifetime_revenue
+        tests:
+          - not_null
+      - name: order_count
+        tests:
+          - not_null
+
+  - name: book_performance
+    description: >
+      One row per book with units sold, revenue, current stock, and derived
+      days_of_stock_remaining at the historical sales pace. Powers Merchandising
+      and Inventory views for slow movers.
+    columns:
+      - name: book_id
+        tests:
+          - not_null
+          - unique
+      - name: units_sold
+        tests:
+          - not_null
+      - name: revenue
+        tests:
+          - not_null
+
+  - name: low_stock_alert
+    description: >
+      Books currently at or below the low-stock threshold (< 20 units) or with
+      missing stock data. stock_status buckets rows into out_of_stock / critical /
+      low. Powers the Warehouse / Ops reorder workflow.
+    columns:
+      - name: book_id
+        tests:
+          - not_null
+          - unique
+      - name: stock_status
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['out_of_stock', 'critical', 'low', 'ok']

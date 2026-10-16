@@ -1,0 +1,139 @@
+version: 2
+
+models:
+  - name: stg_customers
+    description: >
+      Cleaned customer records. Emails are lowercased and trimmed, blank country/city
+      are nulled, and a flag identifies future signup dates (source DQ issue).
+      Grain: one row per customer_id.
+    columns:
+      - name: customer_id
+        description: Primary key from the CRM.
+        tests:
+          - not_null
+          - unique
+      - name: email
+        description: Lowercased, trimmed email. May still contain duplicates across customers (surfaced in DQ reports).
+        tests:
+          - not_null
+      - name: signup_date
+        tests:
+          - not_null
+      - name: has_future_signup_date
+        description: True when signup_date is after today (source DQ flag).
+
+  - name: stg_books
+    description: >
+      Cleaned catalog records. Genre is standardized ("Sci-Fi" → "Science Fiction"),
+      negative prices are nulled and flagged. Grain: one row per book_id.
+    columns:
+      - name: book_id
+        description: Primary key from the catalog system.
+        tests:
+          - not_null
+          - unique
+      - name: title
+        tests:
+          - not_null
+      - name: has_invalid_price
+        description: True when source price was negative (nulled downstream).
+
+  - name: stg_orders
+    description: >
+      Cleaned order headers. Status is lowercased and trimmed to one of the design's
+      accepted values. Grain: one row per order_id.
+    columns:
+      - name: order_id
+        description: Primary key from the OLTP.
+        tests:
+          - not_null
+          - unique
+      - name: customer_id
+        description: FK to stg_customers. Known orphans exist as a source DQ issue.
+        tests:
+          - relationships:
+              arguments:
+                to: ref('stg_customers')
+                field: customer_id
+              config:
+                severity: warn
+      - name: order_date
+        tests:
+          - not_null
+      - name: status
+        description: Normalized order status.
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['placed', 'shipped', 'delivered', 'cancelled', 'returned']
+              config:
+                severity: warn
+
+  - name: stg_order_items
+    description: >
+      Cleaned order line items. Flags surfaced for invalid quantity (<= 0) and
+      zero unit price so Gold can exclude them from valid sales.
+      Grain: one row per order_item_id.
+    columns:
+      - name: order_item_id
+        description: Primary key from the OLTP.
+        tests:
+          - not_null
+          - unique
+      - name: order_id
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_orders')
+                field: order_id
+      - name: book_id
+        description: FK to stg_books. Known orphans exist as a source DQ issue.
+        tests:
+          - relationships:
+              arguments:
+                to: ref('stg_books')
+                field: book_id
+              config:
+                severity: warn
+      - name: has_invalid_quantity
+      - name: has_zero_price
+
+  - name: stg_inventory
+    description: >
+      Cleaned current-stock snapshot. Negative stock values are flagged.
+      Grain: one row per book_id.
+    columns:
+      - name: book_id
+        description: Primary key — one row per book.
+        tests:
+          - not_null
+          - unique
+          - relationships:
+              arguments:
+                to: ref('stg_books')
+                field: book_id
+              config:
+                severity: warn
+      - name: has_negative_stock
+
+  - name: stg_payments
+    description: >
+      Cleaned payment events. Method and status are lowercased and trimmed.
+      Grain: one row per payment_id (duplicates across order_id are intentionally preserved
+      so downstream can detect double-charges).
+    columns:
+      - name: payment_id
+        description: Primary key from the payment gateway.
+        tests:
+          - not_null
+          - unique
+      - name: order_id
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_orders')
+                field: order_id
+              config:
+                severity: warn

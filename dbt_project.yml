@@ -35,3 +35,36 @@ models:
 seeds:
   booknest:
     +schema: raw
+    raw_customers:
+      +column_types:
+        customer_id: INTEGER
+        signup_date: DATE
+    raw_books:
+      +column_types:
+        book_id: INTEGER
+        price: DECIMAL(12,2)
+        published_year: INTEGER
+    raw_orders:
+      +column_types:
+        order_id: INTEGER
+        customer_id: INTEGER
+        order_date: DATE
+        order_total: DECIMAL(12,2)
+    raw_order_items:
+      +column_types:
+        order_item_id: INTEGER
+        order_id: INTEGER
+        book_id: INTEGER
+        quantity: INTEGER
+        unit_price: DECIMAL(12,2)
+    raw_inventory:
+      +column_types:
+        book_id: INTEGER
+        stock_quantity: INTEGER
+        last_restocked_at: DATE
+    raw_payments:
+      +column_types:
+        payment_id: INTEGER
+        order_id: INTEGER
+        amount: DECIMAL(12,2)
+        paid_at: TIMESTAMP
