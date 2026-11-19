@@ -274,3 +274,83 @@ models:
           - accepted_values:
               arguments:
                 values: ['champions', 'loyal_customers', 'at_risk', 'cant_lose_them', 'lost_customers', 'one_time_buyers', 'regular_customers', 'never_purchased']
+
+  # ---------- Accounting / Finance ----------
+  - name: fct_payments
+    description: >
+      Payment fact table. Grain: one row per payment_id. Joins payments with
+      orders and customers to provide reconciliation context. Flags mismatches
+      between payment amount and order total, and calculates days to payment.
+    columns:
+      - name: payment_id
+        description: Primary key.
+        tests:
+          - not_null
+          - unique
+      - name: order_id
+        tests:
+          - not_null
+      - name: customer_id
+        description: FK to dim_customers.
+      - name: payment_status_clean
+        description: Normalized payment status (paid/pending/failed/unknown).
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['paid', 'pending', 'failed', 'unknown']
+      - name: has_reconciliation_issue
+        description: Flag for payment amount mismatch or missing data.
+        tests:
+          - not_null
+      - name: days_to_payment
+        description: Days between order_date and paid_at.
+
+  - name: accounting_reconciliation
+    description: >
+      Order-to-payment reconciliation for Finance. One row per order-payment pair.
+      Flags discrepancies between order total (stated vs computed) and payment amount.
+      Powers Finance audits, AR aging, and collection workflows.
+    columns:
+      - name: order_id
+        description: Primary key (order side).
+        tests:
+          - not_null
+      - name: payment_id
+        description: Payment reference (may be null for unpaid orders).
+      - name: order_status
+        tests:
+          - not_null
+      - name: stated_order_total
+        tests:
+          - not_null
+      - name: payment_amount
+      - name: needs_investigation
+        description: Flag for order/payment mismatch or orphan customer.
+        tests:
+          - not_null
+
+  - name: revenue_by_payment_method
+    description: >
+      Revenue and payment collection analytics by method and status.
+      Aggregated daily with order counts, payment amounts, and collection timing.
+      Powers Finance dashboards for cash flow, payment method trends, and
+      collection performance analysis.
+    columns:
+      - name: payment_method
+        tests:
+          - not_null
+      - name: payment_status_clean
+        tests:
+          - not_null
+      - name: order_date
+        tests:
+          - not_null
+      - name: order_count
+        tests:
+          - not_null
+      - name: total_payment_amount
+        tests:
+          - not_null
+      - name: revenue_recognized
+        tests:
+          - not_null
