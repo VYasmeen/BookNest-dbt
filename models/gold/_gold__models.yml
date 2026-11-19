@@ -186,3 +186,91 @@ models:
           - accepted_values:
               arguments:
                 values: ['out_of_stock', 'critical', 'low', 'ok']
+
+  - name: pricing_analysis
+    description: >
+      Pricing and discount analysis by book. Shows list price, average sale price,
+      discount amounts/percentages, and sales velocity. Identifies high-velocity
+      vs discounted titles. Powers Pricing and Merchandising decisions.
+    columns:
+      - name: book_id
+        description: Primary key.
+        tests:
+          - not_null
+          - unique
+      - name: title
+        tests:
+          - not_null
+      - name: list_price
+        description: Catalog price from dim_books.
+      - name: avg_sale_price
+        description: Average price items sold for across all transactions.
+      - name: avg_discount_percent
+        description: Average percent discount off list price.
+      - name: units_sold
+        tests:
+          - not_null
+
+  - name: inventory_turnover
+    description: >
+      Inventory health and turnover metrics by book. Annualizes sales pace,
+      calculates days on hand, and flags aged/slow-moving stock. Powers
+      Inventory Planning and Merchandising for SKU rationalization.
+    columns:
+      - name: book_id
+        description: Primary key.
+        tests:
+          - not_null
+          - unique
+      - name: title
+        tests:
+          - not_null
+      - name: stock_quantity
+        description: Current stock from the latest inventory snapshot.
+      - name: units_sold_all_time
+        description: Total units sold across entire data window.
+      - name: annual_turnover_rate
+        description: Annualized units per year at observed sales pace.
+      - name: days_on_hand
+        description: Days of stock remaining at current sales rate.
+      - name: inventory_health_status
+        description: Status bucket for operational decisions.
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['no_sales', 'aged_no_recent_sales', 'out_of_stock', 'critical', 'low', 'healthy']
+
+  - name: customer_rfm
+    description: >
+      RFM (Recency, Frequency, Monetary) analysis and segmentation. One row per
+      customer with order metrics and behavioral segment. Segments: champions,
+      loyal, at_risk, cant_lose_them, lost, one_time_buyers, regular, never_purchased.
+      Powers Customer segmentation, churn prevention, and retention campaigns.
+    columns:
+      - name: customer_id
+        description: Primary key.
+        tests:
+          - not_null
+          - unique
+      - name: full_name
+        tests:
+          - not_null
+      - name: email
+        tests:
+          - not_null
+      - name: order_count
+        description: Total orders placed (all statuses).
+        tests:
+          - not_null
+      - name: lifetime_value
+        description: Sum of all valid sale line totals.
+        tests:
+          - not_null
+      - name: days_since_last_order
+        description: Days between today and most recent order.
+      - name: customer_segment
+        description: RFM-derived behavioral segment.
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['champions', 'loyal_customers', 'at_risk', 'cant_lose_them', 'lost_customers', 'one_time_buyers', 'regular_customers', 'never_purchased']
